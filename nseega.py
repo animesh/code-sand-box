@@ -13,5 +13,6 @@ print spectrum, relative_spectrum
 http://code.google.com/p/pyeeg/source/browse/pyeeg.py
 https://github.com/akloster/python-mindwave/blob/master/feedback.py
 https://code.google.com/p/code-sand-box/source/browse/nseega.py
+https://code.google.com/p/misccb/source/browse/geteegfromns.m
 https://code.google.com/hosting/settings
 '''

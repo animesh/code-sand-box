@@ -31,6 +31,14 @@ def simulate(dt_start, dt_end,ls_symbols ,ls_alloc ):
     cum_ret = np.cumprod(na_port_total + 1, axis=0)
     return sharpe_ratio, pdr_sig, pdr_mu, na_port_total[-1]
 
+
+slist=  ['BRCM', 'TXN', 'AMD', 'ADI']  
+salloc= [0,0,0,1]
+sd=dt.datetime(2010, 1, 1)
+se=dt.datetime(2010, 12, 31)
+print simulate(sd,se, slist,salloc)
+
+'''  
 maxsr=float("-inf")
 maxalloc=""
 n=10
@@ -38,7 +46,7 @@ n=10
 for i in range(n):
     for j in range(n):
         for k in range(n):
-            slist= ['AAPL','GLD','GOOG','XOM']
+            slist=  ['AAPL', 'GOOG', 'IBM', 'MSFT'] 
             if 1-((i+j+k)/float(n))>=0:
                 print i/float(n), j/float(n), k/float(n), 1-((i+j+k)/float(n))
                 salloc=[round(i/float(n),2), round(j/float(n),2), round(k/float(n),2), round(1-((i+j+k)/float(n)),2)]
@@ -50,10 +58,6 @@ for i in range(n):
                     maxalloc=salloc
 print i,j,k,slist,salloc,sd,se, sr,sig,mu,cr, maxalloc,maxsr
 
-                
-
-
-'''
 http://wiki.quantsoftware.org/index.php?title=QSTK_License
 http://wiki.quantsoftware.org/index.php?title=QSTK_Tutorial_1#Prerequisites
 http://wiki.quantsoftware.org/index.php?title=QuantSoftware_ToolKit#Documentation
@@ -65,6 +69,6 @@ https://piazza.com/class#spring2013/1/606
 https://www.coursera.org/user/i/185bb8b16b9f8734c33cb05b6484de4b
 slist= ['AXP', 'HPQ', 'IBM', 'HNZ'] #['AAPL','GLD','GOOG','XOM']
 salloc=[0.0, 0.0, 0.0, 1.0]#[0.4, 0.4, 0.0, 0.2]
-sd=dt.datetime(2010, 1, 1)
-se=dt.datetime(2010, 12, 31)
+sd=dt.datetime(2012, 1, 1)
+se=dt.datetime(2012, 12, 31)
 '''
