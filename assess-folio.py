@@ -9,7 +9,6 @@ import numpy as np
 def simulate(dt_start, dt_end,ls_symbols ,ls_alloc ):
     dt_timeofday = dt.timedelta(hours=16)
     ldt_timestamps = du.getNYSEdays(dt_start, dt_end, dt_timeofday)
-    #c_dataobj = da.DataAccess('Yahoo', cachestalltime=0)
     c_dataobj = da.DataAccess('Yahoo')
     ls_keys = ['open', 'high', 'low', 'close', 'volume', 'actual_close']
     ldf_data = c_dataobj.get_data(ldt_timestamps, ls_symbols, ls_keys)
@@ -31,33 +30,33 @@ def simulate(dt_start, dt_end,ls_symbols ,ls_alloc ):
     cum_ret = np.cumprod(na_port_total + 1, axis=0)
     return sharpe_ratio, pdr_sig, pdr_mu, na_port_total[-1]
 
-
-slist=  ['BRCM', 'TXN', 'AMD', 'ADI']  
-salloc= [0,0,0,1]
-sd=dt.datetime(2010, 1, 1)
-se=dt.datetime(2010, 12, 31)
-print simulate(sd,se, slist,salloc)
-
-'''  
 maxsr=float("-inf")
 maxalloc=""
+c_dataobj = da.DataAccess('Yahoo', cachestalltime=0)
 n=10
-
+slist=  ['TLAB', 'CSCO', 'INTC', 'MSFT']
+salloc = [1/float(len(slist)),1/float(len(slist)),1/float(len(slist)),1/float(len(slist))] 
+sd=dt.datetime(2009, 1, 1)
+se=dt.datetime(2011, 12, 31)
+print simulate(sd,se, slist,salloc)
 for i in range(n):
     for j in range(n):
         for k in range(n):
-            slist=  ['AAPL', 'GOOG', 'IBM', 'MSFT'] 
             if 1-((i+j+k)/float(n))>=0:
                 print i/float(n), j/float(n), k/float(n), 1-((i+j+k)/float(n))
                 salloc=[round(i/float(n),2), round(j/float(n),2), round(k/float(n),2), round(1-((i+j+k)/float(n)),2)]
-                sd=dt.datetime(2011, 1, 1)
-                se=dt.datetime(2011, 12, 31)
                 sr,sig,mu,cr=simulate(sd,se,slist ,salloc)
                 if sr>maxsr:
                     maxsr=sr
                     maxalloc=salloc
 print i,j,k,slist,salloc,sd,se, sr,sig,mu,cr, maxalloc,maxsr
 
+'''
+slist=  ['BRCM', 'TXN', 'AMD', 'ADI']  
+salloc= [0,0,0,1]
+sd=dt.datetime(2010, 1, 1)
+se=dt.datetime(2010, 12, 31)
+print simulate(sd,se, slist,salloc)
 http://wiki.quantsoftware.org/index.php?title=QSTK_License
 http://wiki.quantsoftware.org/index.php?title=QSTK_Tutorial_1#Prerequisites
 http://wiki.quantsoftware.org/index.php?title=QuantSoftware_ToolKit#Documentation
@@ -67,8 +66,4 @@ https://code.google.com/hosting/settings
 https://class.coursera.org/compinvesting1-002/quiz/start?quiz_id=188
 https://piazza.com/class#spring2013/1/606
 https://www.coursera.org/user/i/185bb8b16b9f8734c33cb05b6484de4b
-slist= ['AXP', 'HPQ', 'IBM', 'HNZ'] #['AAPL','GLD','GOOG','XOM']
-salloc=[0.0, 0.0, 0.0, 1.0]#[0.4, 0.4, 0.0, 0.2]
-sd=dt.datetime(2012, 1, 1)
-se=dt.datetime(2012, 12, 31)
 '''

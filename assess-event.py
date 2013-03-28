@@ -10,7 +10,7 @@ import QSTK.qstkstudy.EventProfiler as ep
 
 def find_events(ls_symbols, d_data):
 
-    df_close = d_data['close']
+    df_close = d_data['actual_close']
     ts_market = df_close['SPY']
     print "Finding Events"
     df_events = copy.deepcopy(df_close)
@@ -21,11 +21,8 @@ def find_events(ls_symbols, d_data):
         for i in range(1, len(ldt_timestamps)):
             f_symprice_today = df_close[s_sym].ix[ldt_timestamps[i]]
             f_symprice_yest = df_close[s_sym].ix[ldt_timestamps[i - 1]]
-            f_marketprice_today = ts_market.ix[ldt_timestamps[i]]
-            f_marketprice_yest = ts_market.ix[ldt_timestamps[i - 1]]
             f_symreturn_today = (f_symprice_today / f_symprice_yest) - 1
-            f_marketreturn_today = (f_marketprice_today / f_marketprice_yest) - 1
-            if f_symreturn_today <= -0.03 and f_marketreturn_today >= 0.02:
+            if f_symprice_today < 6 and f_symprice_yest >= 6:
                 df_events[s_sym].ix[ldt_timestamps[i]] = 1
 
     return df_events
@@ -38,12 +35,17 @@ if __name__ == '__main__':
 
     dataobj = da.DataAccess('Yahoo')
     ls_symbols = dataobj.get_symbols_from_list('sp5002012')
+    #ls_symbols = dataobj.get_symbols_from_list('sp5002008')
     ls_symbols.append('SPY')
     ls_keys = ['open', 'high', 'low', 'close', 'volume', 'actual_close']
     ldf_data = dataobj.get_data(ldt_timestamps, ls_symbols, ls_keys)
     d_data = dict(zip(ls_keys, ldf_data))
-
+    for s_key in ls_keys:
+        d_data[s_key] = d_data[s_key].fillna(method = 'ffill')
+        d_data[s_key] = d_data[s_key].fillna(method = 'bfill')
+        d_data[s_key] = d_data[s_key].fillna(1.0)
     df_events = find_events(ls_symbols, d_data)
+    
     print "Creating Study"
     ep.eventprofiler(df_events, d_data, i_lookback=20, i_lookforward=20,
                 s_filename='MyEventStudy.pdf', b_market_neutral=True, b_errorbars=True,
