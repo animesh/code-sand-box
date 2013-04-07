@@ -16,9 +16,9 @@ data = np.loadtxt(inp, delimiter=',',
 sym = data['ticker']
 vol = data['number']  
 day = []
+
 for i in range(len(data)):
-    day.append(dt.date(data['year'][i],data['month'][i],
-                                  data['day'][i]))
+    day.append(dt.date(data['year'][i],data['month'][i],data['day'][i]))
     f.write("%s,%d\n" % (day[i],amt))
     
 print sym,vol,day
