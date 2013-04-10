@@ -30,43 +30,55 @@ dt_timeofday = dt.timedelta(hours=hour)
 ldt_timestamps = du.getNYSEdays(dt_start, dt_end, dt_timeofday)
 c_dataobj = da.DataAccess('Yahoo')
 df_close = c_dataobj.get_data(ldt_timestamps, ls_symbols, "close")
-vals = np.random.randint(0, 1000, len(ls_symbols))
-vals = vals / float(sum(vals))
+vals = np.zeros(len(ls_symbols))
+for stk in range(len(ls_symbols)):
+    if sym[0]==ls_symbols[stk]:
+        vals[stk]+=vol[0]
 vals = vals.reshape(1, -1)
 df_alloc = pd.DataFrame(vals,
             index=[ldt_timestamps[0] + dt.timedelta(hours=5)],
             columns=ls_symbols)
-dt_last_date = ldt_timestamps[0]
 exist={}
-for dt_action in day[1:]:
+exist[ldt_timestamps[0]] = exist.get(ldt_timestamps[0], 0) + 0
+for sn in range(len(data)):
+    dt_action=day[sn]
+    if sn==0:
+        na_vals = df_alloc.xs(ldt_timestamps[0] + dt.timedelta(hours=5)).values
+    else:
+        na_vals = df_alloc.xs(ldt_timestamps[0] + dt.timedelta(hours=5)).values
+        #na_vals=np.zeros(len(ls_symbols))#df_alloc.xs(dt_action).values
     for dt_date in ldt_timestamps[1:]:
         if dt_date==dt_action and exist[dt_action]<1:
             exist[dt_action] = exist.get(dt_action, 0) + 1
-            print dt_date,dt_action
-            na_vals = np.random.randint(0, 1000, len(ls_symbols))
-            na_vals = na_vals / float(sum(na_vals))
+            for stk in range(len(ls_symbols)):
+                if sym[sn]==ls_symbols[stk]:
+                   na_vals[stk]+=vol[sn]
             na_vals = na_vals.reshape(1, -1)
-            df_new_row = pd.DataFrame(na_vals, index=[dt_action],
-                                        columns=ls_symbols)
+            df_new_row = pd.DataFrame(na_vals, index=[dt_action],columns=ls_symbols)
             df_alloc = df_alloc.append(df_new_row)
+        elif dt_date==dt_action:
+            exist[dt_action] = exist.get(dt_action, 0) + 1
+            print exist[dt_action], df_alloc.index.searchsorted(dt_action) , "already present!", dt_date,dt_action #,df_alloc.date
+            na_vals = df_alloc.xs(dt_action).values
+            print na_vals
+            for stk in range(len(ls_symbols)):
+                if sym[sn]==ls_symbols[stk]:
+                    df_alloc.xs(dt_action,copy=False)[sym[sn]]+=vol[sn]
+            na_vals = df_alloc.xs(dt_action).values
+            print na_vals
         else:
             exist[dt_action] = exist.get(dt_action, 0) + 0
-            print exist[dt_action], df_alloc.index.searchsorted(dt_action) , "already present!", dt_date,dt_action #,df_alloc.date
-            na_vals = np.random.randint(0, 1000, len(ls_symbols))
-            na_vals = na_vals / float(sum(na_vals))
-            na_vals = na_vals.reshape(1, -1)
-            df_new_row = pd.DataFrame(na_vals, index=[dt_date],
-                                        columns=ls_symbols)
-            #df_alloc = df_alloc.append(df_new_row)
-
+            
 #print dt_date,ii,df_alloc.ix[ii-1]#,df_alloc.ix[df_alloc.index[ii]]
-
+print df_alloc
 df_alloc['_CASH'] = 0.0
 (ts_funds, ts_leverage, f_commission, f_slippage, f_borrow_cost) = qstksim.tradesim(df_alloc,
                 df_close, f_start_cash=amt, i_leastcount=1, b_followleastcount=True,
                 f_slippage=0.0005, f_minimumcommision=5.0, f_commision_share=0.0035,
                 i_target_leverage=1, f_rate_borrow=3.5, log="transaction.csv")
 print ts_funds #, ts_leverage, f_commission, f_slippage, f_borrow_cost
+
+
 
 ls_keys = ['open', 'high', 'low', 'close', 'volume', 'actual_close']
 ldf_data = c_dataobj.get_data(ldt_timestamps, ls_symbols, ls_keys)
@@ -86,6 +98,7 @@ cum_ret = np.cumprod(na_port_total + 1, axis=0)
 print sharpe_ratio, pdr_sig, pdr_mu, na_port_total[-1]
 
 #print df_close, df_alloc
+#print df_close, na_price
 
 f.close()
 
