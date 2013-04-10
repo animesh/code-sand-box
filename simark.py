@@ -37,21 +37,36 @@ df_alloc = pd.DataFrame(vals,
             index=[ldt_timestamps[0] + dt.timedelta(hours=5)],
             columns=ls_symbols)
 dt_last_date = ldt_timestamps[0]
-for dt_date in ldt_timestamps[1:]:
-    if dt_last_date.month != dt_date.month:
-        na_vals = np.random.randint(0, 1000, len(ls_symbols))
-        na_vals = na_vals / float(sum(na_vals))
-        na_vals = na_vals.reshape(1, -1)
-        df_new_row = pd.DataFrame(na_vals, index=[dt_date],
-                                    columns=ls_symbols)
-        df_alloc = df_alloc.append(df_new_row)
-    dt_last_date = dt_date
+exist={}
+for dt_action in day[1:]:
+    for dt_date in ldt_timestamps[1:]:
+        if dt_date==dt_action and exist[dt_action]<1:
+            exist[dt_action] = exist.get(dt_action, 0) + 1
+            print dt_date,dt_action
+            na_vals = np.random.randint(0, 1000, len(ls_symbols))
+            na_vals = na_vals / float(sum(na_vals))
+            na_vals = na_vals.reshape(1, -1)
+            df_new_row = pd.DataFrame(na_vals, index=[dt_action],
+                                        columns=ls_symbols)
+            df_alloc = df_alloc.append(df_new_row)
+        else:
+            exist[dt_action] = exist.get(dt_action, 0) + 0
+            print exist[dt_action], df_alloc.index.searchsorted(dt_action) , "already present!", dt_date,dt_action #,df_alloc.date
+            na_vals = np.random.randint(0, 1000, len(ls_symbols))
+            na_vals = na_vals / float(sum(na_vals))
+            na_vals = na_vals.reshape(1, -1)
+            df_new_row = pd.DataFrame(na_vals, index=[dt_date],
+                                        columns=ls_symbols)
+            #df_alloc = df_alloc.append(df_new_row)
+
+#print dt_date,ii,df_alloc.ix[ii-1]#,df_alloc.ix[df_alloc.index[ii]]
+
 df_alloc['_CASH'] = 0.0
 (ts_funds, ts_leverage, f_commission, f_slippage, f_borrow_cost) = qstksim.tradesim(df_alloc,
                 df_close, f_start_cash=amt, i_leastcount=1, b_followleastcount=True,
                 f_slippage=0.0005, f_minimumcommision=5.0, f_commision_share=0.0035,
                 i_target_leverage=1, f_rate_borrow=3.5, log="transaction.csv")
-print ts_funds, ts_leverage, f_commission, f_slippage, f_borrow_cost
+print ts_funds #, ts_leverage, f_commission, f_slippage, f_borrow_cost
 
 ls_keys = ['open', 'high', 'low', 'close', 'volume', 'actual_close']
 ldf_data = c_dataobj.get_data(ldt_timestamps, ls_symbols, ls_keys)
@@ -70,15 +85,13 @@ na_component_total = np.cumprod(portfolio_daily_rets + 1, axis=0)
 cum_ret = np.cumprod(na_port_total + 1, axis=0)
 print sharpe_ratio, pdr_sig, pdr_mu, na_port_total[-1]
 
-
-
+#print df_close, df_alloc
 
 f.close()
-
-
 
 
 '''
 http://wiki.quantsoftware.org/index.php?title=CompInvesti_Homework_3
 http://wiki.quantsoftware.org/index.php?title=QSTK_Tutorial_2
+http://stackoverflow.com/questions/9877391/how-to-get-the-closest-single-row-after-a-specific-datetime-index-using-python-p
 '''
