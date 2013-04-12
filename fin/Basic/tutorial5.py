@@ -83,6 +83,7 @@ def main():
     print "Commissions : ", f_commission
     print "Slippage : ", f_slippage
     print "Borrowing Cost : ", f_borrow_cost
+    print df_alloc
 
 if __name__ == '__main__':
     main()

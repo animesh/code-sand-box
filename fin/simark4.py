@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 
 amt=1000000
-inp='orders.csv'
+inp='orders2.csv'
 otp='values.csv'
 
 data = np.loadtxt(inp, delimiter=',',
@@ -24,7 +24,7 @@ for i in range(len(data)):
 ls_symbols = list(set(sym))
 #ls_symbols.append('_CASH')
 dt_timeofday = dt.timedelta(hours=hour)
-ldt_timestamps = du.getNYSEdays(day[0] - dt.timedelta(days = 10), day[-1] + dt.timedelta(days = 10), dt_timeofday)
+ldt_timestamps = du.getNYSEdays(day[0], day[-1], dt_timeofday)
 c_dataobj = da.DataAccess('Yahoo')
 df_close = c_dataobj.get_data(ldt_timestamps, ls_symbols, "close")
 
@@ -62,7 +62,7 @@ for sn in range(len(data)):
             na_old=na_vals
             print na_old
     elif sn==1:
-        na_old = df_alloc.xs(day[0] - dt.timedelta(hours=5)).values
+        na_old = df_alloc.xs(day[0] + dt.timedelta(hours=5)).values
         print sn, na_old
         if exist[dt_action]<1:
             exist[dt_action] = exist.get(dt_action, 0) + 1
@@ -96,25 +96,20 @@ for sn in range(len(data)):
                 vals[stk]+=vol[0]
         vals = vals.reshape(1, -1)
         df_alloc = pd.DataFrame(vals,
-                    index=[day[0] - dt.timedelta(hours=5)],
+                    index=[day[0] + dt.timedelta(hours=5)],
                     columns=ls_symbols)
 
         
                     
 #print dt_date,ii,df_alloc.ix[ii-1]#,df_alloc.ix[df_alloc.index[ii]]
 
-na_vals = df_alloc.xs(day[-1]).values
-na_vals = na_vals.reshape(1, -1)
-df_new_row = pd.DataFrame(na_vals, index=[day[-1]  + dt.timedelta(days=1)],columns=ls_symbols)
-df_alloc = df_alloc.append(df_new_row)
 df_alloc = df_alloc / df_alloc.sum(axis=1)
 df_alloc=df_alloc.fillna(method='ffill')
 df_alloc=df_alloc.fillna(method='bfill')
 
+print df_alloc
 
 df_alloc['_CASH'] = 0.0
-print df_alloc, na_vals, sn, day[-1],day[sn],dt_action,df_new_row #, ldt_timestamps.index.searchsorted(dt_action)
-
 (ts_funds, ts_leverage, f_commission, f_slippage, f_borrow_cost) = qstksim.tradesim(df_alloc,
                 df_close, f_start_cash=amt, i_leastcount=1, b_followleastcount=True,
                 f_slippage=0.0005, f_minimumcommision=5.0, f_commision_share=0.0035,

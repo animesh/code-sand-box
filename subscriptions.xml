@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Ani-abonnementer i Google Leser</title>
+    </head>
+    <body>
+        <outline text="BetterExplained" title="BetterExplained"
+            type="rss" xmlUrl="http://betterexplained.com/feed/" htmlUrl="http://betterexplained.com"/>
+        <outline text="FiveThirtyEight" title="FiveThirtyEight"
+            type="rss"
+            xmlUrl="http://fivethirtyeight.blogs.nytimes.com/feed/" htmlUrl="http://fivethirtyeight.blogs.nytimes.com/"/>
+        <outline text="Leadership Freak" title="Leadership Freak"
+            type="rss"
+            xmlUrl="http://leadershipfreak.wordpress.com/feed/" htmlUrl="http://leadershipfreak.wordpress.com"/>
+        <outline text="MY DIGITAL NOTEBOOK" title="MY DIGITAL NOTEBOOK"
+            type="rss" xmlUrl="http://gauravtiwari.org/feed/" htmlUrl="http://gauravtiwari.org"/>
+        <outline text="R-bloggers" title="R-bloggers" type="rss"
+            xmlUrl="http://www.r-bloggers.com/feed/" htmlUrl="http://www.r-bloggers.com"/>
+        <outline title="programming" text="programming">
+            <outline text="fa.haskell Google Group"
+                title="fa.haskell Google Group" type="rss"
+                xmlUrl="http://groups.google.com/group/fa.haskell/feed/rss_v2_0_msgs.xml" htmlUrl="http://groups.google.com/group/fa.haskell"/>
+        </outline>
+        <outline title="computational" text="computational">
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/atom.xml" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+        </outline>
+        <outline title="bio-roll" text="bio-roll">
+            <outline text="Bioinformer" title="Bioinformer" type="rss"
+                xmlUrl="http://kierenlythgow.wordpress.com/feed/" htmlUrl="http://kierenlythgow.wordpress.com"/>
+            <outline text="Discovering Biology in a Digital World"
+                title="Discovering Biology in a Digital World"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/scienceblogs/digitalbio" htmlUrl="http://scienceblogs.com/digitalbio/"/>
+            <outline text="Eureka! Science News - Popular science news"
+                title="Eureka! Science News - Popular science news"
+                type="rss" xmlUrl="http://esciencenews.com/rss.xml" htmlUrl="http://esciencenews.com"/>
+            <outline text="freshbrainz.com 新鲜脑汁"
+                title="freshbrainz.com 新鲜脑汁" type="rss"
+                xmlUrl="http://freshbrainz.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="http://www.freshbrainz.com/"/>
+            <outline text="ScienceBlogs Select"
+                title="ScienceBlogs Select" type="rss"
+                xmlUrl="http://feeds.feedburner.com/scienceblogs/ScienceblogsSelect" htmlUrl="http://scienceblogs.com"/>
+            <outline text="The Tree of Life" title="The Tree of Life"
+                type="rss"
+                xmlUrl="http://phylogenomics.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="http://phylogenomics.blogspot.com/"/>
+        </outline>
+        <outline title="biology-news" text="biology-news">
+            <outline
+                text="Adaptive Complexity: The problem with computational biology papers"
+                title="Adaptive Complexity: The problem with computational biology papers"
+                type="rss"
+                xmlUrl="http://adaptivecomplexity.blogspot.com/atom.xml" htmlUrl="http://adaptivecomplexity.blogspot.com/"/>
+            <outline text="Bioinformatics - Advance Access"
+                title="Bioinformatics - Advance Access" type="rss"
+                xmlUrl="http://bioinformatics.oxfordjournals.org/rss/ahead.xml" htmlUrl="http://bioinformatics.oxfordjournals.org"/>
+            <outline text="Bioinformatics - current issue"
+                title="Bioinformatics - current issue" type="rss"
+                xmlUrl="http://bioinformatics.oxfordjournals.org/rss/current.xml" htmlUrl="http://bioinformatics.oxfordjournals.org"/>
+            <outline text="Biology News Net" title="Biology News Net"
+                type="rss" xmlUrl="http://www.biologynews.net/index.xml" htmlUrl="http://www.biologynews.net/"/>
+            <outline text="BMC Bioinformatics  - Latest articles"
+                title="BMC Bioinformatics  - Latest articles" type="rss"
+                xmlUrl="http://www.biomedcentral.com/bmcbioinformatics/rss" htmlUrl="http://www.biomedcentral.com/bmcbioinformatics/"/>
+            <outline
+                text="Cornell University/Computational Biology Service Unit"
+                title="Cornell University/Computational Biology Service Unit"
+                type="rss"
+                xmlUrl="http://windowshpc.net/blogs/cornell_universitycomputational_biology_service_unit/rss.aspx" htmlUrl="http://windowshpc.net/blogs/cornell_universitycomputational_biology_service_unit/default.aspx"/>
+            <outline text="EurekAlert! - Biology"
+                title="EurekAlert! - Biology" type="rss"
+                xmlUrl="http://www.eurekalert.org/rss/biology.xml" htmlUrl="http://www.eurekalert.org"/>
+            <outline text="European Bioinformatics Institute"
+                title="European Bioinformatics Institute" type="rss"
+                xmlUrl="http://www.ebi.ac.uk/Information/News/rss/ebinews.xml" htmlUrl="http://www.ebi.ac.uk/Information/News/news.html"/>
+            <outline text="GeneRef Combined News"
+                title="GeneRef Combined News" type="rss"
+                xmlUrl="http://www.generef.com/rss/all.news.xml" htmlUrl="http://www.generef.com/"/>
+            <outline text="Genome Research current issue"
+                title="Genome Research current issue" type="rss"
+                xmlUrl="http://www.genome.org/rss/current.xml" htmlUrl="http://genome.cshlp.org"/>
+            <outline text="JAMA current issue"
+                title="JAMA current issue" type="rss"
+                xmlUrl="http://jama.ama-assn.org/rss/current.xml" htmlUrl="http://www.annals.org"/>
+            <outline text="Journal of Computational Biology"
+                title="Journal of Computational Biology" type="rss"
+                xmlUrl="http://www.liebertonline.com/action/showFeed?mi=cjwv&amp;ai=su&amp;jc=CMB&amp;type=etoc&amp;feed=rss" htmlUrl="http://online.liebertpub.com/loi/cmb?ai=su&amp;mi=cjwv&amp;af=R"/>
+            <outline text="Keck Computational Systems Biology"
+                title="Keck Computational Systems Biology" type="rss"
+                xmlUrl="http://sourceforge.net/export/rss2_projfiles.php?group_id=41646" htmlUrl="http://sourceforge.net/projects/jdesigner/"/>
+            <outline text="London Review of Books"
+                title="London Review of Books" type="rss"
+                xmlUrl="http://www.lrb.co.uk/homerss.xml" htmlUrl="http://www.lrb.co.uk/"/>
+            <outline text="Molecular Systems Biology"
+                title="Molecular Systems Biology" type="rss"
+                xmlUrl="http://www.nature.com/msb/current_issue/rss/" htmlUrl="http://www.nature.com/msb/current_issue/"/>
+            <outline text="Nature" title="Nature" type="rss"
+                xmlUrl="http://www.nature.com/nature/current_issue/rss" htmlUrl="http://www.nature.com/nature/current_issue/"/>
+            <outline text="New England Journal of Medicine"
+                title="New England Journal of Medicine" type="rss"
+                xmlUrl="http://content.nejm.org/rss/current.xml" htmlUrl="http://www.nejm.org/"/>
+            <outline text="New Scientist - Latest Headlines"
+                title="New Scientist - Latest Headlines" type="rss"
+                xmlUrl="http://www.pheedo.com/f/newscientist_online-news" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fwww.pheedo.com%2Ff%2Fnewscientist_online-news"/>
+            <outline text="NOVA scienceNOW | PBS"
+                title="NOVA scienceNOW | PBS" type="rss"
+                xmlUrl="http://www.pbs.org/wgbh/nova/sciencenow/rss/nsn.xml" htmlUrl="http://www.pbs.org/nova/sciencenow/"/>
+            <outline
+                text="Physical Review Letter on Breaking Spaghetti Leads to 2006 Ig ..."
+                title="Physical Review Letter on Breaking Spaghetti Leads to 2006 Ig ..."
+                type="rss" xmlUrl="http://www.physorg.com/physorg.xml" htmlUrl="http://phys.org/"/>
+            <outline
+                text="PLoS Biology - A Peer-Reviewed Open-Access Journal"
+                title="PLoS Biology - A Peer-Reviewed Open-Access Journal"
+                type="rss"
+                xmlUrl="http://biology.plosjournals.org/perlserv/?request=get-rss&amp;issn=1545-7885&amp;type=new-articles" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fbiology.plosjournals.org%2Fperlserv%2F%3Frequest%3Dget-rss%26issn%3D1545-7885%26type%3Dnew-articles"/>
+            <outline
+                text="PLoS Computational Biology - A Peer-Reviewed Open-Access Journal"
+                title="PLoS Computational Biology - A Peer-Reviewed Open-Access Journal"
+                type="rss"
+                xmlUrl="http://compbiol.plosjournals.org/perlserv/?request=get-rss&amp;issn=1553-7358&amp;type=new-articles" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fcompbiol.plosjournals.org%2Fperlserv%2F%3Frequest%3Dget-rss%26issn%3D1553-7358%26type%3Dnew-articles"/>
+            <outline text="q-bio updates on arXiv.org"
+                title="q-bio updates on arXiv.org" type="rss"
+                xmlUrl="http://arxiv.org/rss/q-bio" htmlUrl="http://arxiv.org/"/>
+            <outline text="Science @ NASA" title="Science @ NASA"
+                type="rss" xmlUrl="http://science.nasa.gov/rss.xml" htmlUrl="http://science.nasa.gov/science-news/science-at-nasa/"/>
+            <outline text="Science: Current Issue"
+                title="Science: Current Issue" type="rss"
+                xmlUrl="http://www.sciencemag.org/rss/current.xml" htmlUrl="http://www.sciencemag.org"/>
+            <outline text="Scientific American - Official RSS Feed"
+                title="Scientific American - Official RSS Feed"
+                type="rss" xmlUrl="http://www.sciam.com/xml/sciam.xml" htmlUrl="http://www.scientificamerican.com"/>
+            <outline
+                text="TIME Magazine Online: Top Science and Health Stories"
+                title="TIME Magazine Online: Top Science and Health Stories"
+                type="rss"
+                xmlUrl="http://www.time.com/time/rss/health/0,20326,,00.xml" htmlUrl="http://www.time.com/time/health?xid=rss-health"/>
+        </outline>
+        <outline title="bioinformatics-latest-news" text="bioinformatics-latest-news">
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/atom.xml" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+        </outline>
+        <outline title="computational-biology-news" text="computational-biology-news">
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/atom.xml" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+        </outline>
+        <outline title="cbn" text="cbn">
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/atom.xml" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+        </outline>
+        <outline title="cbn-roll" text="cbn-roll">
+            <outline text="Bioinformatics Zen"
+                title="Bioinformatics Zen" type="rss"
+                xmlUrl="http://www.bioinformaticszen.com/feed/" htmlUrl="http://bioinformaticszen.com"/>
+            <outline text="Buried Treasure" title="Buried Treasure"
+                type="rss"
+                xmlUrl="http://larsjuhljensen.wordpress.com/feed/" htmlUrl="http://larsjuhljensen.wordpress.com"/>
+            <outline text="business|bytes|genes|molecules"
+                title="business|bytes|genes|molecules" type="rss"
+                xmlUrl="http://feeds.feedburner.com/mndoci" htmlUrl="http://mndoci.com"/>
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/feeds/posts/default" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+            <outline text="Flags and Lollipops - Bioinformatics Blog"
+                title="Flags and Lollipops - Bioinformatics Blog"
+                type="rss"
+                xmlUrl="http://www.ghastlyfop.com/blog/atom.xml" htmlUrl="http://www.ghastlyfop.com/blog/"/>
+            <outline text="Globally Connected"
+                title="Globally Connected" type="rss"
+                xmlUrl="http://globallyconnected.blogspot.com/feeds/posts/default" htmlUrl="http://globallyconnected.blogspot.com/"/>
+            <outline text="HubLog" title="HubLog" type="rss"
+                xmlUrl="http://hublog.hubmed.org/index.atom" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fhublog.hubmed.org%2Findex.atom"/>
+            <outline text="iPhylo" title="iPhylo" type="rss"
+                xmlUrl="http://iphylo.blogspot.com/feeds/posts/default" htmlUrl="http://iphylo.blogspot.com/"/>
+            <outline text="Mailund on the Internet"
+                title="Mailund on the Internet" type="rss"
+                xmlUrl="http://www.mailund.dk/index.php/feed/" htmlUrl="http://www.mailund.dk"/>
+            <outline text="nodalpoint.org - A bioinformatics weblog"
+                title="nodalpoint.org - A bioinformatics weblog"
+                type="rss" xmlUrl="http://www.nodalpoint.org/rss.xml" htmlUrl="http://archive.nodalpoint.org"/>
+            <outline text="nodalpoint.org - Comments"
+                title="nodalpoint.org - Comments" type="rss"
+                xmlUrl="http://www.nodalpoint.org/comments.xml" htmlUrl="http://archive.nodalpoint.org"/>
+            <outline text="Perfect Storm" title="Perfect Storm"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/PerfectStorm" htmlUrl="http://tiago.org/ps"/>
+            <outline
+                text="Propeller Twist: RNA &amp;amp; Bioinformatics"
+                title="Propeller Twist: RNA &amp;amp; Bioinformatics"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/PropellerTwist" htmlUrl="http://fjossinet.u-strasbg.fr/"/>
+            <outline text="Public Rambling" title="Public Rambling"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/pedrobeltrao" htmlUrl="http://www.evocellnet.com/"/>
+            <outline text="Science and Progress"
+                title="Science and Progress" type="rss"
+                xmlUrl="http://feeds.feedburner.com/ScienceAndProgress" htmlUrl="http://awayfromthebench.blogspot.com/"/>
+            <outline text="Suicyte Notes" title="Suicyte Notes"
+                type="rss" xmlUrl="http://suicyte.wordpress.com/feed/" htmlUrl="http://suicyte.wordpress.com"/>
+            <outline
+                text="What You&amp;#39;re Doing Is Rather Desperate"
+                title="What You&amp;#39;re Doing Is Rather Desperate"
+                type="rss" xmlUrl="http://nsaunders.wordpress.com/feed/" htmlUrl="http://nsaunders.wordpress.com"/>
+            <outline text="YOKOFAKUN" title="YOKOFAKUN" type="rss"
+                xmlUrl="http://plindenbaum.blogspot.com/feeds/posts/default" htmlUrl="http://plindenbaum.blogspot.com/"/>
+        </outline>
+        <outline title="Regs" text="Regs">
+            <outline text="(ukjent tittel)" title="(ukjent tittel)"
+                type="rss"
+                xmlUrl="http://feedproxy.google.com/~r/TEDTalks_video/~3/gC4qSTL-HHM/1018" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FTEDTalks_video%2F%7E3%2FgC4qSTL-HHM%2F1018"/>
+            <outline text="43 Folders" title="43 Folders" type="rss"
+                xmlUrl="http://feeds.feedburner.com/43Folders" htmlUrl="http://www.43folders.com"/>
+            <outline text="Abhinav Sonkar's Blog"
+                title="Abhinav Sonkar's Blog" type="rss"
+                xmlUrl="http://feeds.abhinavsonkar.com/AbhinavSonkar" htmlUrl="http://www.abhinavsonkar.com"/>
+            <outline text="Abso-fraggin-lutely"
+                title="Abso-fraggin-lutely" type="rss"
+                xmlUrl="http://absofragginlutely.blogspot.com/feeds/posts/default" htmlUrl="http://absofragginlutely.blogspot.com/"/>
+            <outline
+                text="Adaptive Complexity: The problem with computational biology papers"
+                title="Adaptive Complexity: The problem with computational biology papers"
+                type="rss"
+                xmlUrl="http://adaptivecomplexity.blogspot.com/atom.xml" htmlUrl="http://adaptivecomplexity.blogspot.com/"/>
+            <outline text="Alan Winfield's Web Log"
+                title="Alan Winfield's Web Log" type="rss"
+                xmlUrl="http://alanwinfield.blogspot.com/feeds/posts/default" htmlUrl="http://alanwinfield.blogspot.com/"/>
+            <outline text="Ars Technica" title="Ars Technica" type="rss"
+                xmlUrl="http://feeds.arstechnica.com/arstechnica/everything" htmlUrl="http://arstechnica.com"/>
+            <outline text="Bad Astronomy Blog"
+                title="Bad Astronomy Blog" type="rss"
+                xmlUrl="http://www.badastronomy.com/bablog/feed/" htmlUrl="http://blogs.discovermagazine.com/badastronomy"/>
+            <outline text="Bad Science" title="Bad Science" type="rss"
+                xmlUrl="http://www.badscience.net/feed/" htmlUrl="http://www.badscience.net"/>
+            <outline text="Bill Kerr" title="Bill Kerr" type="rss"
+                xmlUrl="http://billkerr2.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="http://billkerr2.blogspot.com/"/>
+            <outline text="Bioinformatics - Advance Access"
+                title="Bioinformatics - Advance Access" type="rss"
+                xmlUrl="http://bioinformatics.oxfordjournals.org/rss/ahead.xml" htmlUrl="http://bioinformatics.oxfordjournals.org"/>
+            <outline text="Bioinformatics - current issue"
+                title="Bioinformatics - current issue" type="rss"
+                xmlUrl="http://bioinformatics.oxfordjournals.org/rss/current.xml" htmlUrl="http://bioinformatics.oxfordjournals.org"/>
+            <outline text="bioinformatics - Google News"
+                title="bioinformatics - Google News" type="rss"
+                xmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;q=bioinformatics&amp;output=atom" htmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;q=bioinformatics"/>
+            <outline text="Bioinformatics Zen"
+                title="Bioinformatics Zen" type="rss"
+                xmlUrl="http://www.bioinformaticszen.com/feed/" htmlUrl="http://bioinformaticszen.com"/>
+            <outline text="Bioinformer" title="Bioinformer" type="rss"
+                xmlUrl="http://kierenlythgow.wordpress.com/feed/" htmlUrl="http://kierenlythgow.wordpress.com"/>
+            <outline text="Biology News Net" title="Biology News Net"
+                type="rss" xmlUrl="http://www.biologynews.net/index.xml" htmlUrl="http://www.biologynews.net/"/>
+            <outline text="biology-news" title="biology-news" type="rss"
+                xmlUrl="http://www.google.com/reader/public/atom/user/11136726768885096694/label/biology-news" htmlUrl="http://www.google.com/reader/view/user%2F11136726768885096694%2Flabel%2Fbiology-news"/>
+            <outline text="BMC Bioinformatics  - Latest articles"
+                title="BMC Bioinformatics  - Latest articles" type="rss"
+                xmlUrl="http://www.biomedcentral.com/bmcbioinformatics/rss" htmlUrl="http://www.biomedcentral.com/bmcbioinformatics/"/>
+            <outline text="Boing Boing" title="Boing Boing" type="rss"
+                xmlUrl="http://feeds.boingboing.net/boingboing/iBag" htmlUrl="http://boingboing.net"/>
+            <outline text="Briefings in Bioinformatics - current issue"
+                title="Briefings in Bioinformatics - current issue"
+                type="rss"
+                xmlUrl="http://bib.oxfordjournals.org/rss/current.xml" htmlUrl="http://bib.oxfordjournals.org"/>
+            <outline text="Building confidence."
+                title="Building confidence." type="rss"
+                xmlUrl="http://rbaltman.wordpress.com/feed/" htmlUrl="http://rbaltman.wordpress.com"/>
+            <outline text="Buried Treasure" title="Buried Treasure"
+                type="rss"
+                xmlUrl="http://larsjuhljensen.wordpress.com/feed/" htmlUrl="http://larsjuhljensen.wordpress.com"/>
+            <outline text="Business - Google News"
+                title="Business - Google News" type="rss"
+                xmlUrl="http://news.google.com/news?pz=1&amp;cf=all&amp;ned=us&amp;hl=en&amp;topic=b&amp;output=rss" htmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;topic=b"/>
+            <outline text="business|bytes|genes|molecules"
+                title="business|bytes|genes|molecules" type="rss"
+                xmlUrl="http://feeds.feedburner.com/mndoci" htmlUrl="http://mndoci.com"/>
+            <outline text="Co.Exist" title="Co.Exist" type="rss"
+                xmlUrl="http://www.fastcoexist.com/rss.xml" htmlUrl="http://www.fastcoexist.com"/>
+            <outline text="coding" title="coding" type="rss"
+                xmlUrl="http://www.reddit.com/r/coding/.rss" htmlUrl="http://www.reddit.com/r/coding/"/>
+            <outline text="Communications of the ACM: Latest Issue"
+                title="Communications of the ACM: Latest Issue"
+                type="rss" xmlUrl="http://cacm.acm.org/magazine.rss" htmlUrl="http://cacm.acm.org/magazine.rss"/>
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/feeds/posts/default" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/atom.xml" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+            <outline text="Computational Complexity"
+                title="Computational Complexity" type="rss"
+                xmlUrl="http://blog.computationalcomplexity.org/feeds/posts/default" htmlUrl="http://blog.computationalcomplexity.org/"/>
+            <outline
+                text="Cornell University/Computational Biology Service Unit"
+                title="Cornell University/Computational Biology Service Unit"
+                type="rss"
+                xmlUrl="http://windowshpc.net/blogs/cornell_universitycomputational_biology_service_unit/rss.aspx" htmlUrl="http://windowshpc.net/blogs/cornell_universitycomputational_biology_service_unit/default.aspx"/>
+            <outline text="cs updates on arXiv.org"
+                title="cs updates on arXiv.org" type="rss"
+                xmlUrl="http://export.arxiv.org/rss/cs" htmlUrl="http://arxiv.org/"/>
+            <outline text="Daily Kos" title="Daily Kos" type="rss"
+                xmlUrl="http://feeds.dailykos.com/dailykos/index.xml" htmlUrl="http://www.dailykos.com"/>
+            <outline text="Daniel Lemire's blog"
+                title="Daniel Lemire's blog" type="rss"
+                xmlUrl="http://lemire.me/blog/feed/" htmlUrl="http://lemire.me/blog"/>
+            <outline text="Dataninja" title="Dataninja" type="rss"
+                xmlUrl="http://dataninja.wordpress.com/feed/" htmlUrl="http://dataninja.wordpress.com"/>
+            <outline text="Delicious/ani1977" title="Delicious/ani1977"
+                type="rss" xmlUrl="http://del.icio.us/rss/ani1977" htmlUrl="http://previous.delicious.com/ani1977"/>
+            <outline text="Digg / Programming"
+                title="Digg / Programming" type="rss"
+                xmlUrl="http://digg.com/rss/indexprogramming.xml" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fdigg.com%2Frss%2Findexprogramming.xml"/>
+            <outline text="Dilbert.com Blog" title="Dilbert.com Blog"
+                type="rss" xmlUrl="http://dilbert.com/blog/entry.feed/" htmlUrl="http://dilbert.com/blog"/>
+            <outline text="Discovering Biology in a Digital World"
+                title="Discovering Biology in a Digital World"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/scienceblogs/digitalbio" htmlUrl="http://scienceblogs.com/digitalbio/"/>
+            <outline text="Documentaries" title="Documentaries"
+                type="rss"
+                xmlUrl="http://www.reddit.com/r/Documentaries/top/.rss" htmlUrl="http://www.reddit.com/r/Documentaries/"/>
+            <outline text="Edge" title="Edge" type="rss"
+                xmlUrl="http://www.edge.org/?q=rss.xml" htmlUrl="http://www.edge.org/"/>
+            <outline text="Eureka! Science News - Popular science news"
+                title="Eureka! Science News - Popular science news"
+                type="rss" xmlUrl="http://esciencenews.com/rss.xml" htmlUrl="http://esciencenews.com"/>
+            <outline text="EurekAlert! - Biology"
+                title="EurekAlert! - Biology" type="rss"
+                xmlUrl="http://www.eurekalert.org/rss/biology.xml" htmlUrl="http://www.eurekalert.org"/>
+            <outline text="European Bioinformatics Institute"
+                title="European Bioinformatics Institute" type="rss"
+                xmlUrl="http://www.ebi.ac.uk/Information/News/rss/ebinews.xml" htmlUrl="http://www.ebi.ac.uk/Information/News/news.html"/>
+            <outline text="Expert Programming"
+                title="Expert Programming" type="rss"
+                xmlUrl="http://www.reddit.com/r/ExpertProgramming/.rss" htmlUrl="http://www.reddit.com/r/ExpertProgramming/"/>
+            <outline text="Explaining mathematics"
+                title="Explaining mathematics" type="rss"
+                xmlUrl="http://explainingmaths.wordpress.com/feed/" htmlUrl="http://explainingmaths.wordpress.com"/>
+            <outline text="fa.haskell Google Group"
+                title="fa.haskell Google Group" type="rss"
+                xmlUrl="http://groups.google.com/group/fa.haskell/feed/rss_v2_0_msgs.xml" htmlUrl="http://groups.google.com/group/fa.haskell"/>
+            <outline text="Financial Times - UK Homepage"
+                title="Financial Times - UK Homepage" type="rss"
+                xmlUrl="http://www.ft.com/rss/home/uk" htmlUrl="http://www.ft.com/home/uk"/>
+            <outline text="Fitness" title="Fitness" type="rss"
+                xmlUrl="http://www.reddit.com/r/Fitness/.rss" htmlUrl="http://www.reddit.com/r/Fitness/"/>
+            <outline text="Flags and Lollipops - Bioinformatics Blog"
+                title="Flags and Lollipops - Bioinformatics Blog"
+                type="rss"
+                xmlUrl="http://www.ghastlyfop.com/blog/atom.xml" htmlUrl="http://www.ghastlyfop.com/blog/"/>
+            <outline text="freshbrainz.com 新鲜脑汁"
+                title="freshbrainz.com 新鲜脑汁" type="rss"
+                xmlUrl="http://freshbrainz.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="http://www.freshbrainz.com/"/>
+            <outline text="GeneRef Combined News"
+                title="GeneRef Combined News" type="rss"
+                xmlUrl="http://www.generef.com/rss/all.news.xml" htmlUrl="http://www.generef.com/"/>
+            <outline text="Genome Research current issue"
+                title="Genome Research current issue" type="rss"
+                xmlUrl="http://www.genome.org/rss/current.xml" htmlUrl="http://genome.cshlp.org"/>
+            <outline text="Gizmag Emerging Technology Magazine"
+                title="Gizmag Emerging Technology Magazine" type="rss"
+                xmlUrl="http://gizmag.com/xml/" htmlUrl="http://www.gizmag.com/"/>
+            <outline text="Globally Connected"
+                title="Globally Connected" type="rss"
+                xmlUrl="http://globallyconnected.blogspot.com/feeds/posts/default" htmlUrl="http://globallyconnected.blogspot.com/"/>
+            <outline text="god science - Google News"
+                title="god science - Google News" type="rss"
+                xmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;q=god%20science&amp;output=atom" htmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;q=god+science"/>
+            <outline text="Google News India" title="Google News India"
+                type="rss" xmlUrl="http://news.google.co.in/?output=rss" htmlUrl="http://news.google.co.in/news?pz=1&amp;ned=in&amp;hl=en"/>
+            <outline text="Google Research Blog"
+                title="Google Research Blog" type="rss"
+                xmlUrl="http://googleresearch.blogspot.com/feeds/posts/default" htmlUrl="http://googleresearch.blogspot.com/"/>
+            <outline text="Gödel's Lost Letter and P=NP"
+                title="Gödel's Lost Letter and P=NP" type="rss"
+                xmlUrl="http://rjlipton.wordpress.com/feed/" htmlUrl="http://rjlipton.wordpress.com"/>
+            <outline text="Hacker News" title="Hacker News" type="rss"
+                xmlUrl="http://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/"/>
+            <outline text="HubLog" title="HubLog" type="rss"
+                xmlUrl="http://hublog.hubmed.org/index.atom" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fhublog.hubmed.org%2Findex.atom"/>
+            <outline text="iPhylo" title="iPhylo" type="rss"
+                xmlUrl="http://iphylo.blogspot.com/feeds/posts/default" htmlUrl="http://iphylo.blogspot.com/"/>
+            <outline text="JAMA current issue"
+                title="JAMA current issue" type="rss"
+                xmlUrl="http://jama.ama-assn.org/rss/current.xml" htmlUrl="http://www.annals.org"/>
+            <outline text="Journal of Computational Biology"
+                title="Journal of Computational Biology" type="rss"
+                xmlUrl="http://www.liebertonline.com/action/showFeed?mi=cjwv&amp;ai=su&amp;jc=CMB&amp;type=etoc&amp;feed=rss" htmlUrl="http://online.liebertpub.com/loi/cmb?ai=su&amp;mi=cjwv&amp;af=R"/>
+            <outline text="Journey By Starlight"
+                title="Journey By Starlight" type="rss"
+                xmlUrl="http://journeybystarlight.blogspot.com/feeds/posts/default" htmlUrl="http://journeybystarlight.blogspot.com/"/>
+            <outline text="Keck Computational Systems Biology"
+                title="Keck Computational Systems Biology" type="rss"
+                xmlUrl="http://sourceforge.net/export/rss2_projfiles.php?group_id=41646" htmlUrl="http://sourceforge.net/projects/jdesigner/"/>
+            <outline
+                text="Lambda the Ultimate - Programming Languages Weblog"
+                title="Lambda the Ultimate - Programming Languages Weblog"
+                type="rss"
+                xmlUrl="http://lambda-the-ultimate.org/rss.xml" htmlUrl="http://lambda-the-ultimate.org"/>
+            <outline text="lecturefox" title="lecturefox" type="rss"
+                xmlUrl="http://www.lecturefox.com/blog/feed/atom/" htmlUrl="http://www.onlinecourses.com/blog"/>
+            <outline text="Lifehacker" title="Lifehacker" type="rss"
+                xmlUrl="http://lifehacker.com/excerpts.xml" htmlUrl="http://lifehacker.com"/>
+            <outline text="Lifehacker: top" title="Lifehacker: top"
+                type="rss"
+                xmlUrl="http://lifehacker.com/tag/top/index.xml" htmlUrl="http://lifehacker.com/tag/top"/>
+            <outline text="London Review of Books"
+                title="London Review of Books" type="rss"
+                xmlUrl="http://www.lrb.co.uk/homerss.xml" htmlUrl="http://www.lrb.co.uk/"/>
+            <outline text="M100 Blog" title="M100 Blog" type="rss"
+                xmlUrl="http://m100.marketocracy.com/m100/atom.xml" htmlUrl="http://m100.marketocracy.com/m100/"/>
+            <outline text="Mailund on the Internet"
+                title="Mailund on the Internet" type="rss"
+                xmlUrl="http://feeds.feedburner.com/MailundOnTheInternet" htmlUrl="http://www.mailund.dk"/>
+            <outline text="Mailund on the Internet"
+                title="Mailund on the Internet" type="rss"
+                xmlUrl="http://www.mailund.dk/index.php/feed/" htmlUrl="http://www.mailund.dk"/>
+            <outline text="MarketWatch.com - Top Stories"
+                title="MarketWatch.com - Top Stories" type="rss"
+                xmlUrl="http://www.marketwatch.com/rss/topstories" htmlUrl="http://www.marketwatch.com/"/>
+            <outline
+                text="Marketwire - Breaking News Releases (English Only)"
+                title="Marketwire - Breaking News Releases (English Only)"
+                type="rss"
+                xmlUrl="http://www.marketwire.com/rss/BreakingNewsReleasesEnglish.xml" htmlUrl="http://www.marketwire.com"/>
+            <outline text="MassGenomics" title="MassGenomics" type="rss"
+                xmlUrl="http://feeds.feedburner.com/Massgenomics" htmlUrl="http://massgenomics.org"/>
+            <outline text="math" title="math" type="rss"
+                xmlUrl="http://www.reddit.com/r/math/.rss" htmlUrl="http://www.reddit.com/r/math/"/>
+            <outline text="mathematics - Google News"
+                title="mathematics - Google News" type="rss"
+                xmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;q=mathematics&amp;output=atom" htmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;q=mathematics"/>
+            <outline text="Mavericks of the Mind"
+                title="Mavericks of the Mind" type="rss"
+                xmlUrl="http://mavericksofthemind.com/feed" htmlUrl="http://mavericksofthemind.com"/>
+            <outline text="Minding the Planet"
+                title="Minding the Planet" type="rss"
+                xmlUrl="http://novaspivack.typepad.com/nova_spivacks_weblog/atom.xml" htmlUrl="http://novaspivack.typepad.com/nova_spivacks_weblog/"/>
+            <outline text="Molecular Systems Biology"
+                title="Molecular Systems Biology" type="rss"
+                xmlUrl="http://www.nature.com/msb/current_issue/rss/" htmlUrl="http://www.nature.com/msb/current_issue/"/>
+            <outline text="Nature" title="Nature" type="rss"
+                xmlUrl="http://www.nature.com/nature/current_issue/rss" htmlUrl="http://www.nature.com/nature/current_issue/"/>
+            <outline
+                text="Nature Precedings - Subject feed for Bioinformatics"
+                title="Nature Precedings - Subject feed for Bioinformatics"
+                type="rss"
+                xmlUrl="http://precedings.nature.com/subjects/bioinformatics/feed" htmlUrl="http://precedings.nature.com/subjects/bioinformatics/"/>
+            <outline
+                text="NatureNews - Most recent articles - nature.com science feeds"
+                title="NatureNews - Most recent articles - nature.com science feeds"
+                type="rss" xmlUrl="http://www.nature.com/news/rss.rdf" htmlUrl="http://www.nature.com/nature/rdf/news/most-recent"/>
+            <outline text="neuroinformatics - Google News"
+                title="neuroinformatics - Google News" type="rss"
+                xmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;q=neuroinformatics&amp;output=atom" htmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;q=neuroinformatics"/>
+            <outline text="New England Journal of Medicine"
+                title="New England Journal of Medicine" type="rss"
+                xmlUrl="http://content.nejm.org/rss/current.xml" htmlUrl="http://www.nejm.org/"/>
+            <outline text="New Scientist - Latest Headlines"
+                title="New Scientist - Latest Headlines" type="rss"
+                xmlUrl="http://www.pheedo.com/f/newscientist_online-news" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fwww.pheedo.com%2Ff%2Fnewscientist_online-news"/>
+            <outline text="New Scientist - Online News"
+                title="New Scientist - Online News" type="rss"
+                xmlUrl="http://feeds.newscientist.com/science-news" htmlUrl="http://www.newscientist.com/"/>
+            <outline text="nodalpoint.org - A bioinformatics weblog"
+                title="nodalpoint.org - A bioinformatics weblog"
+                type="rss" xmlUrl="http://www.nodalpoint.org/rss.xml" htmlUrl="http://archive.nodalpoint.org"/>
+            <outline text="nodalpoint.org - Comments"
+                title="nodalpoint.org - Comments" type="rss"
+                xmlUrl="http://www.nodalpoint.org/comments.xml" htmlUrl="http://archive.nodalpoint.org"/>
+            <outline text="NOVA scienceNOW | PBS"
+                title="NOVA scienceNOW | PBS" type="rss"
+                xmlUrl="http://www.pbs.org/wgbh/nova/sciencenow/rss/nsn.xml" htmlUrl="http://www.pbs.org/nova/sciencenow/"/>
+            <outline text="onegoodmove" title="onegoodmove" type="rss"
+                xmlUrl="http://feeds.feedburner.com/onegoodmove/glHe" htmlUrl="http://onegoodmove.org/1gm/"/>
+            <outline
+                text="Pattern Analysis and Machine Intelligence, IEEE Transactions on - new TOC"
+                title="Pattern Analysis and Machine Intelligence, IEEE Transactions on - new TOC"
+                type="rss"
+                xmlUrl="http://ieeexplore.ieee.org/rss/TOC34.XML" htmlUrl="http://ieeexplore.ieee.org"/>
+            <outline text="Paul Graham: Essays"
+                title="Paul Graham: Essays" type="rss"
+                xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.rss" htmlUrl="http://www.paulgraham.com/"/>
+            <outline text="Paul Nylander" title="Paul Nylander"
+                type="rss" xmlUrl="http://nylander.wordpress.com/feed/" htmlUrl="http://nylander.wordpress.com"/>
+            <outline text="Perfect Storm" title="Perfect Storm"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/PerfectStorm" htmlUrl="http://tiago.org/ps"/>
+            <outline text="Pharyngula" title="Pharyngula" type="rss"
+                xmlUrl="http://scienceblogs.com/pharyngula/atom.xml" htmlUrl="http://scienceblogs.com/pharyngula/"/>
+            <outline text="Pharyngula" title="Pharyngula" type="rss"
+                xmlUrl="http://scienceblogs.com/pharyngula/index.xml" htmlUrl="http://scienceblogs.com/pharyngula"/>
+            <outline text="PHD Comics" title="PHD Comics" type="rss"
+                xmlUrl="http://www.phdcomics.com/gradfeed.php" htmlUrl="http://www.phdcomics.com"/>
+            <outline
+                text="Physical Review Letter on Breaking Spaghetti Leads to 2006 Ig ..."
+                title="Physical Review Letter on Breaking Spaghetti Leads to 2006 Ig ..."
+                type="rss" xmlUrl="http://www.physorg.com/physorg.xml" htmlUrl="http://phys.org/"/>
+            <outline
+                text="PLoS Biology - A Peer-Reviewed Open-Access Journal"
+                title="PLoS Biology - A Peer-Reviewed Open-Access Journal"
+                type="rss"
+                xmlUrl="http://biology.plosjournals.org/perlserv/?request=get-rss&amp;issn=1545-7885&amp;type=new-articles" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fbiology.plosjournals.org%2Fperlserv%2F%3Frequest%3Dget-rss%26issn%3D1545-7885%26type%3Dnew-articles"/>
+            <outline
+                text="PLoS Computational Biology - A Peer-Reviewed Open-Access Journal"
+                title="PLoS Computational Biology - A Peer-Reviewed Open-Access Journal"
+                type="rss"
+                xmlUrl="http://compbiol.plosjournals.org/perlserv/?request=get-rss&amp;issn=1553-7358&amp;type=new-articles" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Fcompbiol.plosjournals.org%2Fperlserv%2F%3Frequest%3Dget-rss%26issn%3D1553-7358%26type%3Dnew-articles"/>
+            <outline
+                text="Proceedings of the National Academy of Sciences current issue"
+                title="Proceedings of the National Academy of Sciences current issue"
+                type="rss" xmlUrl="http://www.pnas.org/rss/current.xml" htmlUrl="http://www.pnas.org"/>
+            <outline text="profserious" title="profserious" type="rss"
+                xmlUrl="http://blog.prof.so/feeds/posts/default" htmlUrl="http://blog.prof.so/"/>
+            <outline text="programming" title="programming" type="rss"
+                xmlUrl="http://www.reddit.com/r/programming/.rss" htmlUrl="http://www.reddit.com/r/programming/"/>
+            <outline text="programming: what&amp;#39;s new online"
+                title="programming: what&amp;#39;s new online"
+                type="rss" xmlUrl="http://reddit.com/r/programming/.rss" htmlUrl="http://www.reddit.com/r/programming/"/>
+            <outline
+                text="Propeller Twist: RNA &amp;amp; Bioinformatics"
+                title="Propeller Twist: RNA &amp;amp; Bioinformatics"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/PropellerTwist" htmlUrl="http://fjossinet.u-strasbg.fr/"/>
+            <outline text="Public Rambling" title="Public Rambling"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/pedrobeltrao" htmlUrl="http://www.evocellnet.com/"/>
+            <outline text="q-bio updates on arXiv.org"
+                title="q-bio updates on arXiv.org" type="rss"
+                xmlUrl="http://arxiv.org/rss/q-bio" htmlUrl="http://arxiv.org/"/>
+            <outline text="Recent Articles in Phys. Rev. Lett."
+                title="Recent Articles in Phys. Rev. Lett." type="rss"
+                xmlUrl="http://feeds.aps.org/rss/recent/prl.xml" htmlUrl="http://prl.aps.org/"/>
+            <outline text="reddit: the front page of the internet"
+                title="reddit: the front page of the internet"
+                type="rss" xmlUrl="http://www.reddit.com/.rss" htmlUrl="http://www.reddit.com/"/>
+            <outline text="RichardDawkins.net - All Content"
+                title="RichardDawkins.net - All Content" type="rss"
+                xmlUrl="http://richarddawkins.net/feed.php" htmlUrl="http://richarddawkins.net/archive/all_content/latest"/>
+            <outline text="RSA Comment" title="RSA Comment" type="rss"
+                xmlUrl="http://comment.rsablogs.org.uk/videos/feed/" htmlUrl="http://comment.rsablogs.org.uk"/>
+            <outline text="Science @ NASA" title="Science @ NASA"
+                type="rss" xmlUrl="http://science.nasa.gov/rss.xml" htmlUrl="http://science.nasa.gov/science-news/science-at-nasa/"/>
+            <outline text="Science and Progress"
+                title="Science and Progress" type="rss"
+                xmlUrl="http://feeds.feedburner.com/ScienceAndProgress" htmlUrl="http://awayfromthebench.blogspot.com/"/>
+            <outline text="Science: Current Issue"
+                title="Science: Current Issue" type="rss"
+                xmlUrl="http://www.sciencemag.org/rss/current.xml" htmlUrl="http://www.sciencemag.org"/>
+            <outline text="science: what's new online"
+                title="science: what's new online" type="rss"
+                xmlUrl="http://science.reddit.com/.rss" htmlUrl="http://www.reddit.com/r/science/"/>
+            <outline text="ScienceBlogs Select"
+                title="ScienceBlogs Select" type="rss"
+                xmlUrl="http://feeds.feedburner.com/scienceblogs/ScienceblogsSelect" htmlUrl="http://scienceblogs.com"/>
+            <outline
+                text="ScienceDirect Publication: Tetrahedron Letters"
+                title="ScienceDirect Publication: Tetrahedron Letters"
+                type="rss"
+                xmlUrl="http://rss.sciencedirect.com/getMessage?registrationId=DCAEDDAEEIAFLCBFFCALDHBMELCLDKBHHUCMGFCEHR" htmlUrl="http://www.google.com/reader/view/feed%2Fhttp%3A%2F%2Frss.sciencedirect.com%2FgetMessage%3FregistrationId%3DDCAEDDAEEIAFLCBFFCALDHBMELCLDKBHHUCMGFCEHR"/>
+            <outline text="Scientific American"
+                title="Scientific American" type="rss"
+                xmlUrl="http://rss.sciam.com/ScientificAmerican-Global" htmlUrl="http://www.scientificamerican.com"/>
+            <outline text="Scientific American - News"
+                title="Scientific American - News" type="rss"
+                xmlUrl="http://rss.sciam.com/ScientificAmerican-News" htmlUrl="http://www.scientificamerican.com"/>
+            <outline text="Scientific American - Official RSS Feed"
+                title="Scientific American - Official RSS Feed"
+                type="rss" xmlUrl="http://www.sciam.com/xml/sciam.xml" htmlUrl="http://www.scientificamerican.com"/>
+            <outline text="Shadow Dancing with Mind"
+                title="Shadow Dancing with Mind" type="rss"
+                xmlUrl="http://shadowdancingwithmind.blogspot.com/feeds/posts/default" htmlUrl="http://shadowdancingwithmind.blogspot.com/"/>
+            <outline text="Slashdot" title="Slashdot" type="rss"
+                xmlUrl="http://rss.slashdot.org/Slashdot/slashdot" htmlUrl="http://slashdot.org/"/>
+            <outline text="Stevey's Blog Rants"
+                title="Stevey's Blog Rants" type="rss"
+                xmlUrl="http://steve-yegge.blogspot.com/feeds/posts/default" htmlUrl="http://steve-yegge.blogspot.com/"/>
+            <outline text="Suicyte Notes" title="Suicyte Notes"
+                type="rss" xmlUrl="http://suicyte.wordpress.com/feed/" htmlUrl="http://suicyte.wordpress.com"/>
+            <outline text="TechCrunch" title="TechCrunch" type="rss"
+                xmlUrl="http://feeds.feedburner.com/Techcrunch" htmlUrl="http://techcrunch.com"/>
+            <outline text="TEDTalks (video)" title="TEDTalks (video)"
+                type="rss"
+                xmlUrl="http://feeds.feedburner.com/tedtalks_video" htmlUrl="http://www.ted.com/talks/list"/>
+            <outline text="Tekkie" title="Tekkie" type="rss"
+                xmlUrl="http://tekkie.wordpress.com/feed/" htmlUrl="http://tekkie.wordpress.com"/>
+            <outline text="The Agonist - thoughtful, global, timely"
+                title="The Agonist - thoughtful, global, timely"
+                type="rss" xmlUrl="http://agonist.org/xml" htmlUrl="http://agonist.org"/>
+            <outline text="The Dilbert Blog" title="The Dilbert Blog"
+                type="rss"
+                xmlUrl="http://dilbertblog.typepad.com/the_dilbert_blog/atom.xml" htmlUrl="http://dilbertblog.typepad.com/the_dilbert_blog/"/>
+            <outline text="The Dismal Science"
+                title="The Dismal Science" type="rss"
+                xmlUrl="http://www.reddit.com/r/Economics/.rss" htmlUrl="http://www.reddit.com/r/Economics/"/>
+            <outline text="The Economist: Daily news and views"
+                title="The Economist: Daily news and views" type="rss"
+                xmlUrl="http://www.economist.com/rss/globalAgenda/economist_globalArticle.xml" htmlUrl="http://www.economist.com/"/>
+            <outline text="The Endeavour" title="The Endeavour"
+                type="rss" xmlUrl="http://www.johndcook.com/blog/feed/" htmlUrl="http://www.johndcook.com/blog"/>
+            <outline text="The Full Feed from HuffingtonPost.com"
+                title="The Full Feed from HuffingtonPost.com" type="rss"
+                xmlUrl="http://feeds.huffingtonpost.com/huffingtonpost/raw_feed" htmlUrl="http://www.huffingtonpost.com/raw_feed_index.rdf"/>
+            <outline
+                text="The genome sequence of Atlantic cod reveals a unique immune system"
+                title="The genome sequence of Atlantic cod reveals a unique immune system"
+                type="rss"
+                xmlUrl="http://www.nature.com/rss/feed?doi=10.1038/nature10342" htmlUrl="http://www.nature.com/nature/journal/v477/n7363/full/nature10342.html"/>
+            <outline text="The Norway Post - doorway to Norway"
+                title="The Norway Post - doorway to Norway" type="rss"
+                xmlUrl="http://www.norwaypost.no/feed/rss.html" htmlUrl="http://www.norwaypost.no/"/>
+            <outline text="The Panda's Thumb" title="The Panda's Thumb"
+                type="rss" xmlUrl="http://pandasthumb.org/atom.xml" htmlUrl="http://pandasthumb.org/"/>
+            <outline text="The Tree of Life" title="The Tree of Life"
+                type="rss"
+                xmlUrl="http://phylogenomics.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="http://phylogenomics.blogspot.com/"/>
+            <outline
+                text="TIME Magazine Online: Top Science and Health Stories"
+                title="TIME Magazine Online: Top Science and Health Stories"
+                type="rss"
+                xmlUrl="http://www.time.com/time/rss/health/0,20326,,00.xml" htmlUrl="http://www.time.com/time/health?xid=rss-health"/>
+            <outline text="Top Content" title="Top Content" type="rss"
+                xmlUrl="http://ipowerproject.com/leaderboards/topcontent/week?feed=yes&amp;xn_auth=no&amp;n=20&amp;images=yes&amp;imageMaxSize=240" htmlUrl="http://ipowerproject.com/leaderboards/topcontent/week"/>
+            <outline text="Top Stories - Google News"
+                title="Top Stories - Google News" type="rss"
+                xmlUrl="http://news.google.com/news?pz=1&amp;cf=all&amp;ned=us&amp;hl=en&amp;topic=h&amp;num=10&amp;output=rss" htmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;topic=h&amp;num=10"/>
+            <outline text="Wall Street Journal Tech News Briefing"
+                title="Wall Street Journal Tech News Briefing"
+                type="rss"
+                xmlUrl="http://feeds.wsjonline.com/wsj/podcast_wall_street_journal_tech_news_briefing" htmlUrl="http://online.wsj.com/page/audio.html"/>
+            <outline
+                text="What You&amp;#39;re Doing Is Rather Desperate"
+                title="What You&amp;#39;re Doing Is Rather Desperate"
+                type="rss" xmlUrl="http://nsaunders.wordpress.com/feed/" htmlUrl="http://nsaunders.wordpress.com"/>
+            <outline text="What's new" title="What's new" type="rss"
+                xmlUrl="http://terrytao.wordpress.com/feed/" htmlUrl="http://terrytao.wordpress.com"/>
+            <outline text="Wired Science" title="Wired Science"
+                type="rss"
+                xmlUrl="http://blog.wired.com/wiredscience/atom.xml" htmlUrl="http://www.wired.com/wiredscience"/>
+            <outline text="Wired Top Stories" title="Wired Top Stories"
+                type="rss" xmlUrl="http://feeds.wired.com/wired/index" htmlUrl="http://www.wired.com"/>
+            <outline text="Wolfram Blog" title="Wolfram Blog" type="rss"
+                xmlUrl="http://blog.wolfram.com/atom.xml" htmlUrl="http://blog.wolfram.com/"/>
+            <outline text="World - Google News"
+                title="World - Google News" type="rss"
+                xmlUrl="http://news.google.com/news?pz=1&amp;cf=all&amp;ned=us&amp;hl=en&amp;topic=w&amp;output=rss" htmlUrl="http://news.google.com/news?pz=1&amp;ned=us&amp;hl=en&amp;topic=w"/>
+            <outline
+                text="World News [ no US / US Politics news please ]"
+                title="World News [ no US / US Politics news please ]"
+                type="rss"
+                xmlUrl="http://www.reddit.com/r/worldnews/.rss" htmlUrl="http://www.reddit.com/r/worldnews/"/>
+            <outline text="xkcd.com" title="xkcd.com" type="rss"
+                xmlUrl="http://xkcd.com/rss.xml" htmlUrl="http://xkcd.com/"/>
+            <outline text="YOKOFAKUN" title="YOKOFAKUN" type="rss"
+                xmlUrl="http://plindenbaum.blogspot.com/feeds/posts/default" htmlUrl="http://plindenbaum.blogspot.com/"/>
+        </outline>
+        <outline title="bioinformatics" text="bioinformatics">
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/atom.xml" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+        </outline>
+        <outline title="biology" text="biology">
+            <outline text="Computational Biology News"
+                title="Computational Biology News" type="rss"
+                xmlUrl="http://computationalbiologynews.blogspot.com/atom.xml" htmlUrl="http://computationalbiologynews.blogspot.com/"/>
+        </outline>
+    </body>
+</opml>

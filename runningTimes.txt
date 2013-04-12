@@ -1,0 +1,4 @@
+Job	Running time [min]
+Configuring 	0.03341132
+Testing files 	0.033328
+Finish Testing files 	0.033328

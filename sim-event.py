@@ -8,6 +8,9 @@ import QSTK.qstkutil.DataAccess as da
 import QSTK.qstkutil.tsutil as tsu
 import QSTK.qstkstudy.EventProfiler as ep
 
+otp='action.csv'
+f = open(otp, 'w')
+
 def find_events(ls_symbols, d_data):
 
     df_close = d_data['actual_close']
@@ -24,6 +27,7 @@ def find_events(ls_symbols, d_data):
             f_symreturn_today = (f_symprice_today / f_symprice_yest) - 1
             if f_symprice_today > f_symprice_yest:
                 df_events[s_sym].ix[ldt_timestamps[i]] = 1
+                f.write("%s,%d\n" % (day[i],amt))
 
     return df_events
 
@@ -51,8 +55,10 @@ if __name__ == '__main__':
                 s_filename='MyEventStudy.pdf', b_market_neutral=True, b_errorbars=True,
                 s_market_sym='SPY')
 
+f.close()
 
 """
+http://wiki.quantsoftware.org/index.php?title=CompInvesti_Homework_4
 http://wiki.quantsoftware.org/index.php?title=QSTK_Tutorial_9
 http://wiki.quantsoftware.org/index.php?title=CompInvestI_Homework_2
 https://class.coursera.org/compinvesting1-002/wiki/view?page=Week4
