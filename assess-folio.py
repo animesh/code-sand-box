@@ -28,17 +28,19 @@ def simulate(dt_start, dt_end,ls_symbols ,ls_alloc ):
     na_port_total = np.cumprod(portfolio_daily_rets + 1)
     na_component_total = np.cumprod(portfolio_daily_rets + 1, axis=0)
     cum_ret = np.cumprod(na_port_total + 1, axis=0)
-    return sharpe_ratio, pdr_sig, pdr_mu, na_port_total[-1]
+    return na_rets, sharpe_ratio, pdr_sig, pdr_mu, na_port_total[-1]
 
 maxsr=float("-inf")
 maxalloc=""
 c_dataobj = da.DataAccess('Yahoo', cachestalltime=0)
-n=10
+n=4
 slist=  ['TLAB', 'CSCO', 'INTC', 'MSFT']
 salloc = [1/float(len(slist)),1/float(len(slist)),1/float(len(slist)),1/float(len(slist))] 
-sd=dt.datetime(2009, 1, 1)
+sd=dt.datetime(2011, 11, 1)
 se=dt.datetime(2011, 12, 31)
 print simulate(sd,se, slist,salloc)
+
+'''
 for i in range(n):
     for j in range(n):
         for k in range(n):
@@ -51,7 +53,7 @@ for i in range(n):
                     maxalloc=salloc
 print i,j,k,slist,salloc,sd,se, sr,sig,mu,cr, maxalloc,maxsr
 
-'''
+
 slist=  ['BRCM', 'TXN', 'AMD', 'ADI']  
 salloc= [0,0,0,1]
 sd=dt.datetime(2010, 1, 1)

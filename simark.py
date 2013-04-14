@@ -6,30 +6,57 @@ import datetime as dt
 import pandas as pd
 import numpy as np
 
-amt=50000
-inp='action.csv'
+amt=1000000
+inp='orders2.csv'
 otp='values.csv'
 
 data = np.loadtxt(inp, delimiter=',',
             dtype={'names': ('year', 'month','day','ticker','action','number'),
-                'formats': ('I2','I1','I1','S6','S4','I2')})
+                'formats': ('I2','I1','I1','S6','S4','f4')})
 sym = data['ticker']
 vol = data['number']
 act = data['action']
 day = []
 hour = 16
-for i in range(len(data)):
-    day.append(dt.datetime(data['year'][i],data['month'][i],data['day'][i],hour))
+dt_timeofday = dt.timedelta(hours=hour)
 
 ls_symbols = list(set(sym))
 #ls_symbols.append('_CASH')
 dt_timeofday = dt.timedelta(hours=hour)
-ldt_timestamps = du.getNYSEdays(day[0], day[-1], dt_timeofday)
+ldt_timestamps = du.getNYSEdays(dt.datetime(data['year'][0],data['month'][0],data['day'][0]),
+                                dt.datetime(data['year'][-1],data['month'][-1],data['day'][-1])+dt.timedelta(days=1), dt_timeofday)
 c_dataobj = da.DataAccess('Yahoo')
 df_close = c_dataobj.get_data(ldt_timestamps, ls_symbols, "close",verbose=True)
 
 status = df_close * 0
-status['cash'] = float(0)
+status['TOT'] = float(0)
+
+#print data,df_close['AAPL'][1] ,ldt_timestamps, dt.datetime(data['year'][-1],data['month'][-1],data['day'][-1])
+
+for i in range(len(data)):
+    day.append(dt.datetime(data['year'][i],data['month'][i],data['day'][i],hour))
+    quant = vol[i] if act[i] == "Buy" else  -(vol[i])
+    curval = df_close[sym[i]][int(df_close.index.searchsorted(day[i]))]
+    status[sym[i]][int(df_close.index.searchsorted(day[i]))]+= quant
+    status['TOT'][int(df_close.index.searchsorted(day[i]))] -= (quant * curval)
+    print status['TOT'][int(df_close.index.searchsorted(day[i]))] #curval,quant,vol[i],act[i],int(df_close.index.searchsorted(day[i])), day[i], ldt_timestamps[int(df_close.index.searchsorted(day[i]))], df_close['AAPL'][int(df_close.index.searchsorted(day[i]))]
+
+for i in range(1, len(status.index)):
+	status.ix[i] = status.ix[i] + status.ix[i - 1]
+
+status['value'] = np.sum(status.ix[:, :-1] * df_close,axis=1) + status['TOT'] + amt
+sval=status.values[:,:4]#/np.sum(status.values[:,:4],axis=1).reshape((status.values[:,:4].shape[0],1))
+na_price = df_close.values
+na_normalized_price = na_price / na_price[0, :]
+na_rets = na_normalized_price.copy()
+tsu.returnize0(na_rets)
+
+portfolio_daily_rets =  (sval*na_rets) 
+k_sharpe=np.sqrt(252)
+pdr_mu=np.mean(portfolio_daily_rets)
+pdr_sig=np.std(portfolio_daily_rets)
+sharpe_ratio = k_sharpe*pdr_mu/pdr_sig
+print df_close.values,portfolio_daily_rets, status['value'], "SR", sharpe_ratio, pdr_sig, pdr_mu
 
 exist={}
 for sn in range(len(data)):
@@ -101,14 +128,7 @@ for sn in range(len(data)):
                     
 #print dt_date,ii,df_alloc.ix[ii-1]#,df_alloc.ix[df_alloc.index[ii]]
 
-status['value']=np.sum(status.ix[:, :-1]*df_close, axis=1) + status['cash'] + amt
 
-portfolio_daily_rets =  status['value']  / status['value'][0]
-k_sharpe=np.sqrt(252)
-pdr_mu=np.mean(portfolio_daily_rets)
-pdr_sig=np.std(portfolio_daily_rets)
-sharpe_ratio = k_sharpe*pdr_mu/pdr_sig
-print portfolio_daily_rets, status['value'], "SR", sharpe_ratio, pdr_sig, pdr_mu,
 
 na_vals = df_alloc.xs(day[-1]).values
 na_vals = na_vals.reshape(1, -1)
