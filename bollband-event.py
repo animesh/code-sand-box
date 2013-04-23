@@ -10,6 +10,17 @@ import numpy as np
 import math
 import copy
 
+def boll_band(sym,sd,ed):
+    pd = 20
+    inc = 1
+    ts = du.getNYSEdays(sd,ed,dt.timedelta(hours=16))
+    dobj = da.DataAccess('Yahoo')
+    cp = dobj.get_data(ts, sym, "close")
+
+    for i in range(pd-inc,len(cp)):
+        bollval = (cp.values[i] - np.mean(cp.values[i-pd+inc:i+inc])) / (np.std(cp.values[i-pd+inc:i+inc]))
+        return bollval 
+
 def find_events(ls_symbols, d_data):
 
     df_close = d_data['actual_close']
@@ -21,18 +32,26 @@ def find_events(ls_symbols, d_data):
 
     for s_sym in ls_symbols:
         for i in range(1, len(ldt_timestamps)):
-            f_symprice_today = df_close[s_sym].ix[ldt_timestamps[i]]
-            f_symprice_yest = df_close[s_sym].ix[ldt_timestamps[i - 1]]
-            f_symreturn_today = (f_symprice_today / f_symprice_yest) - 1
-            if f_symprice_today > f_symprice_yest:
-                df_events[s_sym].ix[ldt_timestamps[i]] = 1
+            if i>20:
+                start2 = ldt_timestamps[i-20]
+                end2 = ldt_timestamps[i-1]
+                start1 = ldt_timestamps[i-19]
+                end1 = ldt_timestamps[i]
+                f_symbb_today = boll_band([s_sym],start1,end1)
+                f_symbb_yest = boll_band([s_sym],start2,end2)
+                f_SPYbb_today = ts_market.ix[ldt_timestamps[i]]
+                print f_symbb_today,f_symbb_yest,f_SPYbb_today
+                if f_symbb_today <= -2.0 and f_symbb_yest > -2.0 and f_SPYbb_today >= 1.0:
+                    df_events[s_sym].ix[ldt_timestamps[i]] = 1
 
     return df_events
 
+
+
 if __name__ == '__main__':
 
-    dt_start = dt.datetime(2008, 1, 1)
-    dt_end = dt.datetime(2009, 12, 31)
+    dt_start = dt.datetime(2007, 1, 1)
+    dt_end = dt.datetime(2007, 2, 10)
     ldt_timestamps = du.getNYSEdays(dt_start, dt_end, dt.timedelta(hours=16))
 
     dataobj = da.DataAccess('Yahoo')
@@ -46,34 +65,16 @@ if __name__ == '__main__':
         d_data[s_key] = d_data[s_key].fillna(method = 'ffill')
         d_data[s_key] = d_data[s_key].fillna(method = 'bfill')
         d_data[s_key] = d_data[s_key].fillna(1.0)
+
+
     df_events = find_events(ls_symbols, d_data)
-    
     print "Creating Study"
     ep.eventprofiler(df_events, d_data, i_lookback=20, i_lookforward=20,
                 s_filename='MyEventStudy.pdf', b_market_neutral=True, b_errorbars=True,
                 s_market_sym='SPY')
 
 
-    sym = ['GOOG']
-    sym = ['AAPL']
-    sym = ['IBM']
-    sym = ['MSFT']
-    sym = ['SPY']
 
-    sd = dt.datetime(2010,1,1)
-    ed = dt.datetime(2010,12,31)
-    pd = 20
-    inc = 1
-    ts = du.getNYSEdays(sd,ed,dt.timedelta(hours=16))
-    dobj = da.DataAccess('Yahoo')
-    cp = dobj.get_data(ts, sym, "close",verbose=True)
-
-    for i in range(pd-inc,len(cp)):
-        bollval = (cp.values[i] - np.mean(cp.values[i-pd+inc:i+inc])) / (np.std(cp.values[i-pd+inc:i+inc]))
-        print i,ts[i],cp.values[i],bollval #,cp.values[i-pd+inc:i+inc]
-
-
-    
 '''
 http://cran.r-project.org/doc/contrib/Fox-Companion/appendix-mixed-models.pdf
 http://wiki.quantsoftware.org/index.php?title=CompInvesti_Homework_5
