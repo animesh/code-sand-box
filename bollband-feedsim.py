@@ -6,20 +6,9 @@ import QSTK.qstkstudy.EventProfiler as ep
 import datetime as dt
 import pandas as pa
 import numpy as np
-#from matplotlib.pyplot import *
 import math
 import copy
 
-def boll_band(sym,sd,ed):
-    pd = 20
-    inc = 1
-    ts = du.getNYSEdays(sd,ed,dt.timedelta(hours=16))
-    dobj = da.DataAccess('Yahoo')
-    cp = dobj.get_data(ts, sym, "close")
-
-    for i in range(pd-inc,len(cp)):
-        bollval = (cp.values[i] - np.mean(cp.values[i-pd+inc:i+inc])) / (np.std(cp.values[i-pd+inc:i+inc]))
-        return bollval 
 
 def find_events(ls_symbols, d_data):
 
@@ -34,25 +23,17 @@ def find_events(ls_symbols, d_data):
     for s_sym in ls_symbols:
         s = df_close[s_sym]
         bb = (s-pa.rolling_mean(s, 20))/pa.rolling_std(s, 20)
-        #s = pa.Series([1,3,5,np.nan,6,8])
-        #print s,s-pa.rolling_mean(s, 2)/pa.rolling_std(s, 2)
         for i in range(1, len(ldt_timestamps)):
             f_symprice_today = df_close[s_sym].ix[ldt_timestamps[i]]
             f_symprice_yest = df_close[s_sym].ix[ldt_timestamps[i - 1]]
             f_symreturn_today = (f_symprice_today / f_symprice_yest)
-            #start2 = ldt_timestamps[i-20]
-            #end2 = ldt_timestamps[i-1]
-            #start1 = ldt_timestamps[i-19]
-            #end1 = ldt_timestamps[i]
-            #f_symbb_today = boll_band([s_sym],start1,end1)
-            #f_symbb_yest = boll_band([s_sym],start2,end2)
             f_symbb_today = bb.ix[ldt_timestamps[i]]
             f_symbb_yest = bb.ix[ldt_timestamps[i-1]]
             f_symbb_spy = bbspy.ix[ldt_timestamps[i]]
-            #if f_symprice_today < 6 and f_symprice_yest >= 6 and f_symreturn_today < 1:
-            if f_symbb_today < -2 and f_symbb_yest >= -2 and f_symbb_spy >= 1.3:
-                df_events[s_sym].ix[ldt_timestamps[i]] = 1
-
+            if f_symbb_today < -2 and f_symbb_yest >= -2 and f_symbb_spy >= 1:
+                df_new_row = pa.DataFrame(100, index=ldt_timestamps[i],columns=[s_sym])
+                df_alloc = df_alloc.append(df_new_row)
+                
     return df_events
 
 if __name__ == '__main__':
@@ -75,17 +56,13 @@ if __name__ == '__main__':
 
     df_events = find_events(ls_symbols, d_data)
     
-    print "Creating Study"
-    ep.eventprofiler(df_events, d_data, i_lookback=20, i_lookforward=20,
-                s_filename='MyEventStudy.pdf', b_market_neutral=True, b_errorbars=True,
-                s_market_sym='SPY')
-
+    print "Simulating Study"
+    (ts_funds, ts_leverage, f_commission, f_slippage, f_borrow_cost) = qstksim.tradesim(df_alloc,
+                df_close, f_start_cash=1000000, i_leastcount=1, b_followleastcount=True,
+                f_slippage=0.0005, f_minimumcommision=5.0, f_commision_share=0.0035,
+                i_target_leverage=1, f_rate_borrow=3.5, log='simbb.csv')
 
 
 '''
-http://pandas.pydata.org/pandas-docs/dev/10min.html
-http://pandas.pydata.org/pandas-docs/dev/computation.html
-http://pandas.pydata.org/pandas-docs/stable/timeseries.html
-http://wiki.quantsoftware.org/index.php?title=CompInvesti_Homework_6
 http://wiki.quantsoftware.org/index.php?title=CompInvesti_Homework_7
 '''
