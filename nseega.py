@@ -61,4 +61,6 @@ http://en.wikipedia.org/wiki/Neural_oscillation
 http://hive-eu.org/
 http://www.scholarpedia.org/article/Models_of_epilepsy
 http://cs.smith.edu/dftwiki/index.php/MatPlotLib_Tutorial_1
+http://code.google.com/p/labstreaminglayer/
+http://opus.kobv.de/tuberlin/volltexte/2012/3377/pdf/haufe_stefan.pdf
 '''

@@ -7,7 +7,7 @@ x=1:100
 y=x.*2
 z=x\y
 
-save z reg.txt --ascii 
+save reg.txt z -ascii 
 
 %plot(x,y)
 
